@@ -1,0 +1,4 @@
+Punctul c:
+  In mod obisnuit, in utilizarea unui lock se prefera ca apelul lock() sa fie executat inainte de blocul try deoarece daca acest apel ar fi in interiorul blocului try, 
+exista posibilitatea sa apara o exceptie care sa conduca la apelul lui unlock(), ceea ce ar fi incorect dat fiind faptul ca lock() practic nu s-a facut si, astfel, incercarea 
+de a face unlock() in acest caz ar cauza aparitia unei alte exceptii. Acestea sunt evidentiate in Exercitiul2c.png
