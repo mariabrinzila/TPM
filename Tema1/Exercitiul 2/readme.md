@@ -2,8 +2,8 @@ A)<br />
 
 
 B)<br />
-Secventa de executie a cozii FIFO:<br />
-Se verifica valoarea maxima din labels, aceasta fiind 3;<br />
+Secventa de executie a cozii FIFO: <br />
+<t> Se verifica valoarea maxima din labels, aceasta fiind 3; <t/> <br />
 Se cauta cea mai mica valoare din labels , aceasta fiind 0, pe pozitia 1 si 2;<br />
 Se alege pozitia cu indicele cel mai mic;<br />
 Asfel se executa casuta ce contine 0 , de pe prima pozite , ulterior casuta ce contine 0 de pe pozitia 2<br />
