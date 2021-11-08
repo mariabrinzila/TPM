@@ -1,5 +1,5 @@
 A)Linearibilizitate
-![alt text](https://github.com/mariabrinzila/TPM/blob/main/Tema1/Exercitiul%201/Linearizable.png)
+![alt text](https://github.com/mariabrinzila/TPM/blob/main/Tema1/Exercitiul%201/Linearizable.png?raw=true)
 
 Secventa istoriei de executie : 
 R.WRITE(1)(B) -> r=1;
@@ -14,3 +14,4 @@ Secventa de executie este corecta pana ce se ajunge la executia thread-ului A a 
 
 B)Consistenta Secventiala 
 
+![alt text](https://github.com/mariabrinzila/TPM/blob/main/Tema1/Exercitiul%201/Consistenta%20Secventiala.png?raw=true)
