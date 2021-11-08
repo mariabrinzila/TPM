@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
@@ -25,6 +27,19 @@ public class Main {
         for (Person ps : people)
             ps.setT(t);
 
+        // execution time in miliseconds
+        long start = System.currentTimeMillis();
         t.feedTheTribe();
+        long time_a = System.currentTimeMillis() - start;
+        System.out.println("Execution time is: " + time_a);
+
+        try {
+            FileWriter myWriter = new FileWriter("execution.txt");
+            myWriter.write(String.valueOf(time_a));
+            myWriter.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 }
