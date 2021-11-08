@@ -16,6 +16,6 @@ Se constata ca valoarea maxima din label coincide cu valoarea aleasa initia , as
 Importanta compararii indicelui nu doar a label-ului:<br />
 Daca valoarea din label este egala , si s-ar face doar verificarea valorii din label , atunci proprietatea de FIRST COME FIRST SERVED  nu ar mai fi respectata , nestiind care din cele 2 thred-uri cu valori identice in label a fost primul sosit ,si astfel putand sa se aleaga thread-ul ce a ajuns ultimul;<br />
 Compararea se face atunci cand valoarea din label este egala ,pentru a decide care din cele 2 thread-uri este primul sosit;<br /><br />
-![alt text](https://github.com/mariabrinzila/TPM/blob/main/Tema1/Exercitiul%201/Linearizable.png?raw=true) 
+![alt text](https://github.com/mariabrinzila/TPM/blob/main/Tema1/Exercitiul%202/Consistenta%20Secventiala.png?raw=true) 
 
 C)<br />
