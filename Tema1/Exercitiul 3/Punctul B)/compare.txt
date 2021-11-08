@@ -1,0 +1,1 @@
+Exercise 3b takes longer to execute than 3a.
