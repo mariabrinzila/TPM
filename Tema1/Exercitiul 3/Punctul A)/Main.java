@@ -34,9 +34,9 @@ public class Main {
         System.out.println("Execution time is: " + time_a);
 
         try {
-            FileWriter myWriter = new FileWriter("execution.txt");
-            myWriter.write(String.valueOf(time_a));
-            myWriter.close();
+            FileWriter writer = new FileWriter("execution.txt");
+            writer.write(String.valueOf(time_a));
+            writer.close();
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
