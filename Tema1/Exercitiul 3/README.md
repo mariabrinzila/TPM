@@ -1,4 +1,4 @@
-Punctul A:
+Punctul A: <br>
   Vom reprezenta oala ca o clasa singleton care contine 2 elemente: numarul total de portii (N, care este specific de utilizator la inceputul programului) si numarul de portii
 ramase (pentru a avea posibilitatea de a sti cand oala a ramas goala si cu cate portii trebuie sa o umplem in acest caz, adica cu numarul de portii totale).
   Oamenii din trib vor fi reprezentati de clasa Person, unde fiecare persoana are un anumit index si un nume. Aceasta clasa implementeaza Runnable, adica in aceasta clasa vom 
