@@ -4,7 +4,7 @@ Problema poate aparea datorita apelului enqlock.lock(); respectiv dnqlock.lock()
 	public void enq(int x) / public int deq ();<br />
   Problema consta in faptul ca ambele functii ( enq / deq) din cadrul unui thread/mai multor thread-uri vor fi blocate in acelasi timp , fiecare asteptant deblocarea celuilalt pentru a incepe executia , lucru ce nu se va intampla , fapt ce va duce la blocarea thread-ului/thread-urilor pe toata durata executiei;<br />\
   O posibila solutie ar fi implementarea unui flag ce va tine evidenta daca o operatie este blocata si se "va ridica" doar in momentul in care blocarea unei alte operatii nu va cauza un deadlock;
-  O alta posibila solutie ar fi mutarea liniilor de cod :  enqlock.lock() si deqlock.lock() inafara instructiunii repetitive WHILE : <br />
+  O alta posibila solutie ar fi mutarea liniilor de cod :  enqlock.lock() si deqlock.lock() inafara instructiunii repetitive while : <br /><br />
   public void enq(int x) {<br />
     enqlock.lock();<br />
 		while ( tail - head == QSIZE ) {};<br />
