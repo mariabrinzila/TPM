@@ -1,6 +1,33 @@
 A)<br />
-
-
+  In timpul rularii algoritmului propus la punctul A) poate aparea o problema, aparitia unui deadlock;<br />
+Problema poate aparea datorita apelului enqlock.lock(); respectiv dnqlock.lock() din cadrul functiei while a fiecarei functii : <br />
+	public void enq(int x) / public int deq ();<br />
+  Problema consta in faptul ca ambele functii ( enq / deq) din cadrul unui thread/mai multor thread-uri vor fi blocate in acelasi timp , fiecare asteptant deblocarea celuilalt pentru a incepe executia , lucru ce nu se va intampla , fapt ce va duce la blocarea thread-ului/thread-urilor pe toata durata executiei;<br />\
+  O posibila solutie ar fi implementarea unui flag ce va tine evidenta daca o operatie este blocata si se "va ridica" doar in momentul in care blocarea unei alte operatii nu va cauza un deadlock;
+  O alta posibila solutie ar fi mutarea liniilor de cod :  enqlock.lock() si deqlock.lock() inafara instructiunii repetitive WHILE : <br />
+  public void enq(int x) {<br />
+    enqlock.lock();<br />
+		while ( tail - head == QSIZE ) {};<br />
+		try {<br />
+			items [ tail % QSIZE ] = x; <br />
+			tail ++;<br />
+		} finally {<br />
+			enqlock.unlock();<br />
+		}<br />
+	}<br />
+<br /> <br />
+public int deq () {<br />
+    deqlock.lock();<br />
+		while ( tail == head ) {};<br />
+		try {<br />
+			int item = items [ head % QSIZE ]; <br />
+			head ++;<br />
+			return item;<br />
+		} finally {<br />
+			deqlock.unlock();<br />
+		}<br />
+	}<br />
+<br />
 B)<br />
 Secventa de executie a cozii FIFO: <br />
   Se verifica valoarea maxima din labels, aceasta fiind 3; <br />
