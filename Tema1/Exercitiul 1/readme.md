@@ -1,4 +1,5 @@
-A) Linearibilizitate <br />
+A)  <br />
+Linearibilizitate <br />
 Secventa istoriei de executie : <br />
 R.WRITE(1)(B) -> r=1; <br />
 R.READ(1)(C)  ->Succesfull <br />
@@ -13,7 +14,8 @@ Secventa de executie este corecta pana ce se ajunge la executia thread-ului A a 
 ![alt text](https://github.com/mariabrinzila/TPM/blob/main/Tema1/Exercitiul%201/Linearizable.png?raw=true) 
 
 
-B) Consistenta Secventiala  <br />
+B) <br />
+Consistenta Secventiala  <br />
 Secventa istoriei de executie :  <br />
 R.WRITE(1)(B) -> r=1; <br />
 R.READ(1)(A)  ->Succesfull <br />
