@@ -3,16 +3,14 @@ cand se scrie o noua valoare in registru).
 <br/> <br/>
 
 ### Punctul a)
-Punctul de liniarizare corespunzator adaugarii unui element cu succes in lista este ***lock.unlock();*** deoarece dupa ce se face unlock, practic se adauga elementul in lista
-(daca nu se face unlock, atunci inseamna ca pe parcursul incercarii de a adauga elementul, a aparut o eroare si nu s-a ajuns in blocul finally).
+Punctul de liniarizare corespunzator adaugarii unui element cu succes in lista este ***pred.next = node;*** deoarece in acest moment practic se adauga elementul in lista (practic instructiunea spune faptul ca urmatorul dupa pred va fi acum nodul pe care vrem sa-l inseram si daca nu se ajunge in acest punct, inseamna ca elementul nu a putut fi adaugat, adica s-a intrat pe ***return false;***).
 <br/> <br/>
 
 ### Punctul b)
 Punctul de liniarizare corespunzator esecului la adaugarea unui element in lista este ***return false;*** deoarece un element nu va fi adaugat in cazul in care exista deja in lista si acest esec la adaugare se va realiza atata timp cat lock-ul este tinut (unlock-ul se intampla).
 
 ### Punctul c)
-Punctul de liniarizare corespunzator stergerii unui element cu succes din lista este ***lock.unlock();*** deoarece dupa ce se face unlock, practic se sterge elementul in lista 
-(daca nu se face unlock, atunci inseamna ca pe parcursul incercarii de a sterge elementul, a aparut o eroare si nu s-a ajuns in blocul finally).
+Punctul de liniarizare corespunzator stergerii unui element cu succes din lista este ***pred.next = current.next;*** deoarece dupa acest moment practic se sterge elementul in lista (aceasta instructiune practic spune ca urmatorul dupa pred nu va mai fi elementul pe care dorim sa-l stergem, ci urmatorul dupa el si daca nu se ajunge in acest punct, inseamna ca elementul nu a putut fi adaugat, adica s-a intrat pe ***return false;***).
 <br/> <br/>
 
 ### Punctul d) 
